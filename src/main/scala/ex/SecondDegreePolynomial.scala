@@ -17,7 +17,7 @@ object SecondDegreePolynomial:
     SecondDegreePolynomialImpl(secondDegree, firstDegree, constant)
 
 
-case class SecondDegreePolynomialImpl(val secondDegree: Double, val firstDegree: Double, val constant: Double) extends SecondDegreePolynomial:
+case class SecondDegreePolynomialImpl(secondDegree: Double, firstDegree: Double, constant: Double) extends SecondDegreePolynomial:
 
   private def allVariablesOperation(polynomial: SecondDegreePolynomial)(op: (Double, Double) => Double): SecondDegreePolynomial =
     SecondDegreePolynomial(op(secondDegree, polynomial.secondDegree), op(firstDegree, polynomial.firstDegree), op(constant, polynomial.constant))
